@@ -30,15 +30,27 @@ def create_gui():
     # create main window
     root = tk.Tk()
     root.title("SkyScan")
+
+    # set window size and center it on the screen
+    window_width = 400
+    window_height = 300
+    screen_width = root.winfo_screenwidth()
+    screen_height = root.winfo_screenheight()
+    position_top = int(screen_height / 2 - window_height / 2)
+    position_left = int(screen_width / 2 - window_width / 2)
+
+    # set the position and size of the window
+    root.geometry(f'{window_width}x{window_height}+{position_left}+{position_top}')
+
     # create and place widgets
     city_label = tk.Label(root, text="Enter city name:")
-    city_label.grid(row=0, column=0)
+    city_label.grid(row=0, column=0, padx=10, pady=10)
     # create an entry widget for the user to input the city name
     city_entry = tk.Entry(root)
-    city_entry.grid(row=0, column=1)
+    city_entry.grid(row=0, column=1, padx=10, pady=10)
     # label for displaying results
     result_label = tk.Label(root, text="Weather info will appear here.")
-    result_label.grid(row=2, column=0, columnspan=2)
+    result_label.grid(row=2, column=0, columnspan=2, padx=10, pady=20)
 
     # define action at button-click
     def on_button_click():
@@ -54,7 +66,7 @@ def create_gui():
 
     # create a button that calls on_button_click() when pressed
     search_button = tk.Button(root, text="Get Weather", command=on_button_click)
-    search_button.grid(row=1, column=0, columnspan=2)
+    search_button.grid(row=1, column=0, columnspan=2, pady=10)
 
     # run the main loop to display the window
     root.mainloop()
