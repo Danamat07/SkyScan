@@ -23,5 +23,5 @@ git clone https://github.com/Danamat07/SkyScan.git
 ```
   **2. Run the application:**
 ```yaml
-python weather_app.py
+python skyScan.py
 ```
