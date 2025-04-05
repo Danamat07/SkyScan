@@ -6,7 +6,7 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![OpenWeather API](https://img.shields.io/badge/OpenWeather%20API-FF8800?style=for-the-badge&logo=python&logoColor=white)
   - **Python**: The heart of the application, written in Python for its simplicity and power.
-  - **Tkinter**: The GUI toolkit used to build a friendly user interface.
+  - **CustomTkinter**: The GUI toolkit used to build a friendly user interface.
   - **Requests**: A Python library to make HTTP requests and fetch weather data from the OpenWeather API.
   - **OpenWeather API**: A free API that provides real-time weather information from cities around the world.
 
@@ -21,7 +21,11 @@
 ```yaml
 git clone https://github.com/Danamat07/SkyScan.git
 ```
-  **2. Run the application:**
+  **2. Install dependencies:**
+  ```yaml
+pip install customtkinter requests
+```
+  **3. Run the application:**
 ```yaml
 python skyScan.py
 ```
